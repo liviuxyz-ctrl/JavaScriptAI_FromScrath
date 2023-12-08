@@ -1,9 +1,9 @@
 class Controls {
 	constructor() {
+		this.forward = false;
 		this.left = false;
 		this.right = false;
-		this.up = false;
-		this.revers = false;
+		this.reverse = false;
 
 		this.#addKeyboardListeners();
 	}
@@ -18,10 +18,10 @@ class Controls {
 					this.right = true;
 					break;
 				case 'ArrowUp':
-					this.up = true;
+					this.forward = true;
 					break;
 				case 'ArrowDown':
-					this.revers = true;
+					this.reverse = true;
 					break;
 			}
 			console.table(this);
@@ -35,10 +35,10 @@ class Controls {
 					this.right = false;
 					break;
 				case 'ArrowUp':
-					this.up = false;
+					this.forward = false;
 					break;
 				case 'ArrowDown':
-					this.revers = false;
+					this.reverse = false;
 					break;
 			}
 		});
